@@ -35,7 +35,7 @@ class Fetch {
         Statement st = con.createStatement();
 
         // 6. Execute the query -> returns a ResultSet (like a cursor for reading rows)
-        ResultSet rs = st.executeQuery(query);
+        ResultSet rs = st.executeQuery(query); //DQL
 
         // 7. Process the ResultSet (loop through all rows)
         while (rs.next()) {
