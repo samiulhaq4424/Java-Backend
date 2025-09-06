@@ -1,4 +1,4 @@
-package org.jdbcLearning;
+package org.jdbcLearning_1;
 
 /*
     JDBC Steps Recap:

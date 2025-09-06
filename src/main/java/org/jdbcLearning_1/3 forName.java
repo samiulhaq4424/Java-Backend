@@ -1,4 +1,4 @@
-package org.jdbcLearning;
+package org.jdbcLearning_1;
 
 class forName {
     public static void main(String[] args) throws Exception {
@@ -10,11 +10,11 @@ class forName {
         // 👉 If you want to execute only the static block of a class
         // without creating an object, use Class.forName()
         // Needs fully qualified class name (with package)
-        Class.forName("org.jdbcLearning.Xyz");
+        Class.forName("org.jdbcLearning_1.Xyz");
 
         // 👉 If you want to both load the class (static block)
         // and also create an object (instance block), use newInstance()
-        Class.forName("org.jdbcLearning.Abc").newInstance();
+        Class.forName("org.jdbcLearning_1.Abc").newInstance();
     }
 }
 
