@@ -1,4 +1,4 @@
-package org.hibernate_2.fetch1;
+package org.hibernate_2.Fetch1;
 
 import jakarta.persistence.*;
 
