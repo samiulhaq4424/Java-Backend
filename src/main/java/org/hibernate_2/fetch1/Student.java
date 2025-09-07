@@ -1,9 +1,9 @@
-package org.hibernate_2.Introduction_1;
+package org.hibernate_2.fetch1;
 
 import jakarta.persistence.*;
 
 @Entity                             // Marks this class as a Hibernate entity (mapped to DB table)
-@Table(name="student_table")        // Maps to "student_table" instead of default "Student"
+@Table(name="student")  // ✅ maps to your "student" table in database
 class Student {
 
     @Id                             // Primary key
@@ -11,31 +11,24 @@ class Student {
 
     private String sname;           // Will be stored as column "sname"
 
-    @Transient                      // This field will NOT be stored in DB
+//    @Transient     //if used, Hibernate will IGNORE this field (not saved in DB)
     private String color;
 
-    // Getter & Setter methods
-    public int getiD() {
-        return iD;
-    }
 
     public void setiD(int iD) {
         this.iD = iD;
-    }
-
-    public String getSname() {
-        return sname;
     }
 
     public void setSname(String sname) {
         this.sname = sname;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Student[" + "iD=" + iD + ", sname=" + sname + ", color=" + color + ']';
     }
 }
